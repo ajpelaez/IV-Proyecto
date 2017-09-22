@@ -1,1 +1,5 @@
- Repositorio para el proyecto para la asignatura de Infraestructura Virtual. 
+# IV-Proyecto
+
+## Repositorio para el proyecto que se realizará para la asignatura Infraestructura Virtual
+
+Proyecto aún por decidir y desarrollar.
