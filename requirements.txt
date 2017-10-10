@@ -1,2 +1,2 @@
 pyTelegramBotAPI==3.2.1
-blablacarapi==1.0
+git+git://github.com/arrrlo/BlaBlaCar-Client-Api@master
