@@ -1,2 +1,0 @@
-pyTelegramBotAPI==3.2.1
-blablacarapi==1.0
