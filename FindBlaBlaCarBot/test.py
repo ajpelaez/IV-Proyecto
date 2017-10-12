@@ -1,33 +1,37 @@
 import blablacarapi
 from blablacarapi import BlaBlaCarApi
-from pocha import it, describe
 import TripManager
 from blablacarapi import models
+import unittest
 
-@describe('TripManager tests')
-def _():
+class SimplisticTest(unittest.TestCase):
 
-    #Testea la funcion checkCity de la clase TripManager
-    @it('Revisado que una ciudad existe.')
-    def testCheckCity():
-        tripManager = TripManager.TripManager()
-        assert tripManager.checkCity("Granada") is True , "La ciudad de origen no existe"
-        assert tripManager.checkCity("Grandadada") is False, "La ciudad de origen no existe"
+    def setUp(self):
+        self.tripManager = TripManager.TripManager()
 
-    #Testea la funcion setTrips de la clase TripManager
-    @it('Revisado que se introduce un origen y un destino válidos para el viaje.')
-    def testSetTrips():
-        tripManager = TripManager.TripManager()
-        assert tripManager.setTrips("","") == 1 , "El viaje debe tener un destino y origen válidos"
-        assert tripManager.setTrips("Grandadada","") == 2, "El viaje debe tener un destino y origen válidos"
-        assert tripManager.setTrips("Granada","Grandadada") == 3, "El viaje debe tener un destino y origen válidos"
-        assert tripManager.setTrips("Granada","Madrid") == 0, "El viaje debe tener un destino y origen válidos"
+    #Comprueba que si una ciudad existe, nuestra función dirá que existe
+    def testCityExits(self):
+        self.assertTrue(self.tripManager.checkCity("Granada") , "La ciudad Granada debería existir")
 
-    #Testea la funcion getTrips de la clase TripManager
-    @it('Revisado que solo se devuelven viajes si hay viajes guardados.')
-    def testGetTrips():
-        tripManager = TripManager.TripManager()
-        tripManager.trips = None
-        assert tripManager.getTrips() == 1, "No hay viajes guardados"
-        tripManager.setTrips("Granada","Madrid")
-        assert type(tripManager.getTrips()) is models.Trips, "No hay viajes guardados"
+    #Comprueba que si una ciudad existe, nuestra función dirá que existe
+    def testCityNoExits(self):
+        self.assertFalse(self.tripManager.checkCity("Grandadada") , "La ciudad Grandadada no debería existir")
+
+    #Comprueba que si intentamos guardar viajes con destino o origen erróneos, estos no se guarden
+    #Y si guardamos viajes con destino y origen correctos, estos se guarden
+    def testSetTrips(self):
+        self.assertEqual(self.tripManager.setTrips("","Granada") , 1 , "No deberían guardarse viajes sin ciudad de salida")
+        self.assertEqual(self.tripManager.setTrips("Grandadada","") , 2, "No deberían guardarse viajes con una ciudad de salida errónea")
+        self.assertEqual(self.tripManager.setTrips("Granada","Grandadada") , 3, "No deberían guardarse viajes con una ciudad de destino errónea")
+        self.assertEqual(self.tripManager.setTrips("Granada","Madrid") , 0, "Deberían de guardarse los viajes correctamente")
+
+    #Comprueba que nuestra funcion getTrips solo nos devuelva viajes si tenemos viajes guardados
+    def testGetTrips(self):
+        self.tripManager.trips = None
+        self.assertEqual(self.tripManager.getTrips(),1 ,"No debería haber viajes guardados")
+        self.tripManager.setTrips("Granada","Madrid")
+        self.assertIsInstance(self.tripManager.getTrips(), models.Trips, "Debería haber viajes guardados")
+
+
+if __name__ == '__main__':
+    unittest.main()
