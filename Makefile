@@ -1,2 +1,2 @@
 test:
-	cd ./FindBlaBlaCarBot/ && pocha test.py
+	cd ./FindBlaBlaCarBot/ && python3 test.py
