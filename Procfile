@@ -1,1 +1,1 @@
-web: gunicorn FindBlaBlaCarBot.api:__hug_wsgi__
+web: gunicorn FindBlaBlaCarBot.api:__hug_wsgi__ --log-file -
