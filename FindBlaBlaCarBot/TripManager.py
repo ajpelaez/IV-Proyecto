@@ -1,6 +1,5 @@
 from blablacarapi import BlaBlaCarApi
 import requests
-import json
 
 class TripManager:
     def __init__(self):
