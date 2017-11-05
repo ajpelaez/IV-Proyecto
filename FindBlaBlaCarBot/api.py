@@ -1,7 +1,8 @@
 import hug
-from TripManager import TripManager
-import json
-
+try:
+    from .TripManager import TripManager
+except Exception:
+    from TripManager import TripManager
 trip_manager = TripManager()
 
 @hug.get('/')
