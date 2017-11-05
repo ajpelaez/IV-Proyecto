@@ -1,13 +1,13 @@
 import blablacarapi
 from blablacarapi import BlaBlaCarApi
-import TripManager
+from TripManager import TripManager
 from blablacarapi import models
 import unittest
 
 class SimplisticTest(unittest.TestCase):
 
     def setUp(self):
-        self.tripManager = TripManager.TripManager()
+        self.tripManager = TripManager()
 
     #Comprueba que si una ciudad existe, nuestra función dirá que existe
     def testCityExits(self):
@@ -29,8 +29,10 @@ class SimplisticTest(unittest.TestCase):
     def testGetTrips(self):
         self.tripManager.trips = None
         self.assertEqual(self.tripManager.getTrips(),1 ,"No debería haber viajes guardados")
-        self.tripManager.setTrips("Granada","Madrid")
-        self.assertIsInstance(self.tripManager.getTrips(), models.Trips, "Debería haber viajes guardados")
+        self.tripManager.setTrips("Granada","")
+        viajes = (self.tripManager.getTrips())
+        self.assertTrue("Granada" in viajes["viajes"][0]["departure_place"],
+            "Debería haber por lo menos un viaje guardado")
 
 
 if __name__ == '__main__':
