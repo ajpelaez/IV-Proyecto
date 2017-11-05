@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from blablacarapi import BlaBlaCarApi
 import requests
 

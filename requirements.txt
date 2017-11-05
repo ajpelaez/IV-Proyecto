@@ -1,4 +1,4 @@
 pyTelegramBotAPI==3.2.1
 git+git://github.com/ajpelaez/BlaBlaCar-Client-Api@master
-gunicorn==19.7.1
-hug==2.3.2
+gunicorn
+hug
