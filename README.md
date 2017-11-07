@@ -33,7 +33,7 @@ pip3 install codecov
 ### TDD e integración continua
 
 Como plataforma para la integración continua este proyecto usa [Travis-CI](https://travis-ci.org/).
-![Travis-CI](https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_1489700693/travis-ci.png)
+![Travis-CI](https://i2.wp.com/blog.fossasia.org/wp-content/uploads/2016/08/travis.png?resize=128%2C128)
 
 Para el desarrollo de este proyecto se usarán las técnicas de desarrollo guiado por pruebas e integración continua. Gracias a las combinaciones de ambas técnicas conseguimos que el proyecto tenga un fácil mantenimiento además de asegurarnos de que en todo momento nuestro software debería funcionar correctamente y sin fallos haciendo exactamente lo que se le pide.
 
@@ -41,12 +41,11 @@ Puede que el desarrollo basado en tests sea un desarrollo más lento y costoso, 
 
 ### Despliegue en un PaaS
 
-![Heroku](http://i.imgur.com/lwa0UZ8.png)
-
+![Heroku](https://flowdocs.built.io/assets/blt881a8d2361afdcca/Heroku-128.png)
 Como plataforma para el despliegue de la aplicación hemos escogido Heroku ya que además de tener una extensa documentación que nos ha ayudado al despliegue, ofrece planes gratuitoss sin límite de tiempo para alojar nuestra aplicación.
 Heroku también nos ofrece una gran cantidad de add-ons para nuestra aplicación y nos da la posibilidad de hacer deploys automáticos integrados con nuestro motor de integración continua.
 
-Para que el despliegue en Heroku se pueda llevar a cabo hemos tenido que configurar los siguientes ficheros en nuestro repo:
+Para que el despliegue en Heroku se pueda llevar a cabo hemos configurado los siguientes ficheros en nuestro repo:
 
 - **Procfile** (Que contiene los workers que ejecutará heroku)
 - **app.json** (Que contiene la configuración para que cualquiera pueda hacer deploy de nuestra app fácilmente haciendo click en el icono de Deploy to Heroku)
@@ -57,5 +56,12 @@ Para hacer el deploy de nuestra app es tan fácil como seguir los siguientes pas
 - Elegir un nombre y región para la app
 - Activar el worker web en la configuración de nuestra app -> resources
 ![Worker Heroku](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/worker-heroku.png)
+
+Para el **deploy automático** cuando hacemos push a GitHub tenemos que configurar las siguientes opciones en la configuración de nuestra app -> deploy
+- Seleccionar GitHub como método de Despliegue
+![Heroku config](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/config-deploy-heroku1.png)
+
+- Activar despliegue automático y esperar a CI antes de hacer el deploy
+![Heroku config](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/config-deploy-heroku2.png)
 
 Despliegue http://blablacarapi.herokuapp.com/
