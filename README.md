@@ -33,6 +33,7 @@ pip3 install codecov
 ### TDD e integración continua
 
 Como plataforma para la integración continua este proyecto usa [Travis-CI](https://travis-ci.org/).
+
 ![Travis-CI](https://i2.wp.com/blog.fossasia.org/wp-content/uploads/2016/08/travis.png?resize=128%2C128)
 
 Para el desarrollo de este proyecto se usarán las técnicas de desarrollo guiado por pruebas e integración continua. Gracias a las combinaciones de ambas técnicas conseguimos que el proyecto tenga un fácil mantenimiento además de asegurarnos de que en todo momento nuestro software debería funcionar correctamente y sin fallos haciendo exactamente lo que se le pide.
@@ -42,6 +43,7 @@ Puede que el desarrollo basado en tests sea un desarrollo más lento y costoso, 
 ### Despliegue en un PaaS
 
 ![Heroku](https://flowdocs.built.io/assets/blt881a8d2361afdcca/Heroku-128.png)
+
 Como plataforma para el despliegue de la aplicación hemos escogido Heroku ya que además de tener una extensa documentación que nos ha ayudado al despliegue, ofrece planes gratuitoss sin límite de tiempo para alojar nuestra aplicación.
 Heroku también nos ofrece una gran cantidad de add-ons para nuestra aplicación y nos da la posibilidad de hacer deploys automáticos integrados con nuestro motor de integración continua.
 
