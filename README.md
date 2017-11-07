@@ -66,4 +66,4 @@ Para el **deploy automático** cuando hacemos push a GitHub tenemos que configur
 - Activar automatic deploy y marcar la casilla wait for CI to pass before deploy
 ![Heroku config](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/config-deploy-heroku2.png)
 
-Despliegue http://blablacarapi.herokuapp.com/
+despliegue http://blablacarapi.herokuapp.com/
