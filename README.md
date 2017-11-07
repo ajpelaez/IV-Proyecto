@@ -1,5 +1,6 @@
 # Bot de telegram para buscar viajes en blablacar
 [![Build Status](https://travis-ci.org/ajpelaez/IV-Proyecto.svg?branch=master)](https://travis-ci.org/ajpelaez/IV-Proyecto)
+[![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/dwyl/hapi-auth-jwt2.svg?maxAge=2592000)](https://codecov.io/gh/ajpelaez/IV-Proyecto)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ajpelaez/IV-Proyecto)
