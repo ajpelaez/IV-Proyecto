@@ -42,6 +42,9 @@ Puede que el desarrollo basado en tests sea un desarrollo más lento y costoso, 
 
 ### Desplegar en un PaaS
 
+Despliegue http://blablacarapi.herokuapp.com/
+
+
 ![Heroku](https://flowdocs.built.io/assets/blt881a8d2361afdcca/Heroku-128.png)
 
 Como plataforma hemos escogido Heroku ya que además de tener una extensa documentación que nos ha ayudado al desplegar nuestra app, ofrece planes gratuitoss sin límite de tiempo para alojar nuestra aplicación.
@@ -65,5 +68,3 @@ Para el **deploy automático** cuando hacemos push a GitHub tenemos que configur
 
 - Activar automatic deploy y marcar la casilla wait for CI to pass before deploy
 ![Heroku config](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/config-deploy-heroku2.png)
-
-despliegue http://blablacarapi.herokuapp.com/
