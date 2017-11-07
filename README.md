@@ -42,7 +42,7 @@ Puede que el desarrollo basado en tests sea un desarrollo más lento y costoso, 
 
 ### Desplegar en un PaaS
 
-Despliegue http://blablacarapi.herokuapp.com/
+Despliegue https://blablacarapi.herokuapp.com/
 
 
 ![Heroku](https://flowdocs.built.io/assets/blt881a8d2361afdcca/Heroku-128.png)
