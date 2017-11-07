@@ -1,4 +1,4 @@
 test:
-	cd ./FindBlaBlaCarBot/ && coverage test.py
+	cd ./FindBlaBlaCarBot/ && coverage run test.py
 coverage:
 	cd ./FindBlaBlaCarBot/ && codecov
