@@ -17,7 +17,7 @@ El proyecto consistiría en un bot de telegram, que nos proporcionaría informac
 - Se usará la [BlaBlaCar API Client Python Library](https://github.com/arrrlo/BlaBlaCar-Client-Api) para acceder a los datos de viajes publicados.
 - Se usará [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI) para desarrollar el bot de Telegram.
 - Se usará un servidor de base de datos para almacenar los viajes marcados como favoritos de cada usuario.
-- Para el despliegue en la nube se usará la plataforma de [AWS](https://aws.amazon.com/es/).
+- Para desplegar en la nube se usará la plataforma de [AWS](https://aws.amazon.com/es/).
 
 ### Requisitos y dependencias:
 
@@ -40,14 +40,14 @@ Para el desarrollo de este proyecto se usarán las técnicas de desarrollo guiad
 
 Puede que el desarrollo basado en tests sea un desarrollo más lento y costoso, pero todo ese tiempo que se invierte al principio en la programación de los test, es tiempo que luego ahorraremos al programar nuestras funciones ya que ya sabemos exactamente lo que tenemos que programar, además de que también ahorraremos tiempo en tareas de mantenimiento y resolución de bugs.
 
-### Despliegue en un PaaS
+### Desplegar en un PaaS
 
 ![Heroku](https://flowdocs.built.io/assets/blt881a8d2361afdcca/Heroku-128.png)
 
-Como plataforma para el despliegue de la aplicación hemos escogido Heroku ya que además de tener una extensa documentación que nos ha ayudado al despliegue, ofrece planes gratuitoss sin límite de tiempo para alojar nuestra aplicación.
+Como plataforma hemos escogido Heroku ya que además de tener una extensa documentación que nos ha ayudado al desplegar nuestra app, ofrece planes gratuitoss sin límite de tiempo para alojar nuestra aplicación.
 Heroku también nos ofrece una gran cantidad de add-ons para nuestra aplicación y nos da la posibilidad de hacer deploys automáticos integrados con nuestro motor de integración continua.
 
-Para que el despliegue en Heroku se pueda llevar a cabo hemos configurado los siguientes ficheros en nuestro repo:
+Para poder desplegar nuestra app en Heroku hemos configurado los siguientes ficheros en nuestro repo:
 
 - **Procfile** (Que contiene los workers que ejecutará heroku)
 - **app.json** (Que contiene la configuración para que cualquiera pueda hacer deploy de nuestra app fácilmente haciendo click en el icono de Deploy to Heroku)
@@ -60,10 +60,10 @@ Para hacer el deploy de nuestra app es tan fácil como seguir los siguientes pas
 ![Worker Heroku](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/worker-heroku.png)
 
 Para el **deploy automático** cuando hacemos push a GitHub tenemos que configurar las siguientes opciones en la configuración de nuestra app -> deploy
-- Seleccionar GitHub como método de Despliegue
+- Seleccionar GitHub como deploy method
 ![Heroku config](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/config-deploy-heroku1.png)
 
-- Activar despliegue automático y esperar a CI antes de hacer el deploy
+- Activar automatic deploy y marcar la casilla wait for CI to pass before deploy
 ![Heroku config](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/config-deploy-heroku2.png)
 
 Despliegue http://blablacarapi.herokuapp.com/
