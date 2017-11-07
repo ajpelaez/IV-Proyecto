@@ -1,6 +1,6 @@
 # Bot de telegram para buscar viajes en blablacar
 [![Build Status](https://travis-ci.org/ajpelaez/IV-Proyecto.svg?branch=master)](https://travis-ci.org/ajpelaez/IV-Proyecto)
-[![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/dwyl/hapi-auth-jwt2.svg?maxAge=2592000)](https://codecov.io/gh/ajpelaez/IV-Proyecto)
+[![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/ajpelaez/IV-proyecto.svg)](https://codecov.io/gh/ajpelaez/IV-Proyecto)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ajpelaez/IV-Proyecto)
@@ -32,6 +32,30 @@ pip3 install codecov
 
 ### TDD e integración continua
 
+Como plataforma para la integración continua este proyecto usa [Travis-CI](https://travis-ci.org/).
+![Travis-CI](https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_1489700693/travis-ci.png)
+
 Para el desarrollo de este proyecto se usarán las técnicas de desarrollo guiado por pruebas e integración continua. Gracias a las combinaciones de ambas técnicas conseguimos que el proyecto tenga un fácil mantenimiento además de asegurarnos de que en todo momento nuestro software debería funcionar correctamente y sin fallos haciendo exactamente lo que se le pide.
 
 Puede que el desarrollo basado en tests sea un desarrollo más lento y costoso, pero todo ese tiempo que se invierte al principio en la programación de los test, es tiempo que luego ahorraremos al programar nuestras funciones ya que ya sabemos exactamente lo que tenemos que programar, además de que también ahorraremos tiempo en tareas de mantenimiento y resolución de bugs.
+
+### Despliegue en un PaaS
+
+![Heroku](http://i.imgur.com/lwa0UZ8.png)
+
+Como plataforma para el despliegue de la aplicación hemos escogido Heroku ya que además de tener una extensa documentación que nos ha ayudado al despliegue, ofrece planes gratuitoss sin límite de tiempo para alojar nuestra aplicación.
+Heroku también nos ofrece una gran cantidad de add-ons para nuestra aplicación y nos da la posibilidad de hacer deploys automáticos integrados con nuestro motor de integración continua.
+
+Para que el despliegue en Heroku se pueda llevar a cabo hemos tenido que configurar los siguientes ficheros en nuestro repo:
+
+- **Procfile** (Que contiene los workers que ejecutará heroku)
+- **app.json** (Que contiene la configuración para que cualquiera pueda hacer deploy de nuestra app fácilmente haciendo click en el icono de Deploy to Heroku)
+- **requirements.txt** (Que contiene todas las dependencias de nuestra app)
+
+Para hacer el deploy de nuestra app es tan fácil como seguir los siguientes pasos:
+- Hacer click en el boton Deploy to Heroku
+- Elegir un nombre y región para la app
+- Activar el worker web en la configuración de nuestra app -> resources
+![Worker Heroku](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/worker-heroku.png)
+
+Despliegue http://blablacarapi.herokuapp.com/
