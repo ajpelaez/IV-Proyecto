@@ -1,0 +1,7 @@
+{
+  "name": "Blablacar REST API",
+  "description": "Simple REST API for manage Blablacar trips",
+  "repository": "https://github.com/ajpelaez/IV-Proyecto",
+  "logo": "https://d1ovtcjitiy70m.cloudfront.net/vi-1/images/blablacar-ridesharing-logo.svg",
+  "keywords": ["python3", "hug", "blablacar"]
+}
