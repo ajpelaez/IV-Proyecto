@@ -21,6 +21,8 @@ El proyecto consistiría en un bot de telegram, que nos proporcionaría informac
 ~~~
 pip3 install git+git://github.com/ajpelaez/BlaBlaCar-Client-Api@master
 pip3 install pyTelegramBotAPI
+pip3 install gunicorn
+pip3 install hug
 ~~~
 
 ### TDD e integración continua
