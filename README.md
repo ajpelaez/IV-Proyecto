@@ -25,6 +25,8 @@ pip3 install git+git://github.com/ajpelaez/BlaBlaCar-Client-Api@master
 pip3 install pyTelegramBotAPI
 pip3 install gunicorn
 pip3 install hug
+pip3 install coverage
+pip3 install codecov
 ~~~
 
 ### TDD e integración continua
