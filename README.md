@@ -44,6 +44,7 @@ Puede que el desarrollo basado en tests sea un desarrollo más lento y costoso, 
 
 Despliegue https://blablacarapi.herokuapp.com/
 
+Ejemplo de uso: https://blablacarapi.herokuapp/trips/Granada/Madrid
 
 ![Heroku](https://flowdocs.built.io/assets/blt881a8d2361afdcca/Heroku-128.png)
 
