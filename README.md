@@ -11,6 +11,8 @@ El proyecto consistiría en un bot de telegram, que nos proporcionaría informac
 - Buscar todos los viajes disponibles introduciendo solo el origen.
 - Marcar viajes como favoritos, para tener la posibilidad de recordarlos o verlos más tarde.
 
+---
+
 ### Herramientas que se usarán para desarrollar el proyecto:
 
 - Como lenguaje de programación se usará python 3.
@@ -18,6 +20,8 @@ El proyecto consistiría en un bot de telegram, que nos proporcionaría informac
 - Se usará [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI) para desarrollar el bot de Telegram.
 - Se usará un servidor de base de datos para almacenar los viajes marcados como favoritos de cada usuario.
 - Para desplegar en la nube se usará la plataforma de [AWS](https://aws.amazon.com/es/).
+
+---
 
 ### Requisitos y dependencias:
 
@@ -30,6 +34,8 @@ pip3 install coverage
 pip3 install codecov
 ~~~
 
+---
+
 ### TDD e integración continua
 
 Como plataforma para la integración continua este proyecto usa [Travis-CI](https://travis-ci.org/).
@@ -40,11 +46,13 @@ Para el desarrollo de este proyecto se usarán las técnicas de desarrollo guiad
 
 Puede que el desarrollo basado en tests sea un desarrollo más lento y costoso, pero todo ese tiempo que se invierte al principio en la programación de los test, es tiempo que luego ahorraremos al programar nuestras funciones ya que ya sabemos exactamente lo que tenemos que programar, además de que también ahorraremos tiempo en tareas de mantenimiento y resolución de bugs.
 
+---
+
 ### Desplegar en un PaaS
 
 Despliegue https://blablacarapi.herokuapp.com/
 
-Ejemplo de uso: https://blablacarapi.herokuapp/trips/Granada/Madrid
+Ejemplo de uso: https://blablacarapi.herokuapp.com/trips/Granada/Madrid
 
 ![Heroku](https://flowdocs.built.io/assets/blt881a8d2361afdcca/Heroku-128.png)
 
@@ -69,3 +77,14 @@ Para el **deploy automático** cuando hacemos push a GitHub tenemos que configur
 
 - Activar automatic deploy y marcar la casilla wait for CI to pass before deploy
 ![Heroku config](https://raw.githubusercontent.com/ajpelaez/IV-Ejercicios/master/imgs/config-deploy-heroku2.png)
+
+---
+
+### Desplegar en Docker
+![Heroku](http://zencode.nl/wp-content/uploads/2015/05/docker-logo.png)
+
+
+Para el despligue en Docker hemos realizado los siguientes pasos siguiendo la [guía de Docker Hub](https://docs.docker.com/docker-hub/builds/):
+- Registro en [Docker Hub](https://hub.docker.com)
+- Vinculación de la cuenta en Docker Hub con la cuenta en Github.
+- Creación de "Automated Build" usando nuestro repositorio del proyecto de la asignatura.

@@ -41,6 +41,11 @@ class SimplisticTest(unittest.TestCase):
         self.assertEqual(data.status,"200 OK", "Debeŕia haber devuelto código 200")
         self.assertEqual(data.data['status'],"OK", "Debeŕia haber devuelto status == OK")
 
+    def test_status_should_return_OK(self):
+        data = hug.test.get(api, '/status')
+        self.assertEqual(data.status,"200 OK", "Debeŕia haber devuelto código 200")
+        self.assertEqual(data.data['status'],"OK", "Debeŕia haber devuelto status == OK")
+
     def test_should_return_at_least_one_trip(self):
         data = hug.test.get(api, '/trips/Madrid/Granada')
         self.assertEqual(data.status,"200 OK", "Debeŕia haber devuelto código 200")

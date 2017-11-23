@@ -9,6 +9,10 @@ trip_manager = TripManager()
 def status():
     return { "status": "OK" }
 
+@hug.get('/status')
+def status2():
+    return { "status": "OK" }
+
 @hug.get('/trips/{src}/{dest}')
 def get_trips(src: str, dest: str):
     trip_manager.setTrips(src, dest)
