@@ -1,3 +1,5 @@
+#1.0
+
 import hug
 try:
     from .TripManager import TripManager
