@@ -90,7 +90,7 @@ Para el despligue en Docker hemos realizado los siguientes pasos siguiendo la [g
 - Registro en [Docker Hub](https://hub.docker.com)
 - Vinculación de la cuenta en Docker Hub con la cuenta en Github.
 - Creación de "Automated Build" usando nuestro repositorio del proyecto de la asignatura.
-- Registro en [zeit.co](https://zeit.co) para el deploy.
+- Registro en [Zeit](https://zeit.co) para el deploy.
 
 Nuestro contenedor esta disponible en Docker Hub mediante este enlace podemos acceder a él: https://hub.docker.com/r/ajpelaez/blablacar/
 Para descargarlo directamente desde consola podemos usar:
