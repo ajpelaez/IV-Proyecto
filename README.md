@@ -81,10 +81,19 @@ Para el **deploy automático** cuando hacemos push a GitHub tenemos que configur
 ---
 
 ### Desplegar en Docker
-![Heroku](http://zencode.nl/wp-content/uploads/2015/05/docker-logo.png)
+![Docker](http://zencode.nl/wp-content/uploads/2015/05/docker-logo.png)
+
+Contenedor: https://iv-proyecto-zuhudxhzgi.now.sh/
 
 
 Para el despligue en Docker hemos realizado los siguientes pasos siguiendo la [guía de Docker Hub](https://docs.docker.com/docker-hub/builds/):
 - Registro en [Docker Hub](https://hub.docker.com)
 - Vinculación de la cuenta en Docker Hub con la cuenta en Github.
 - Creación de "Automated Build" usando nuestro repositorio del proyecto de la asignatura.
+- Registro en [zeit.co](https://zeit.co) para el deploy.
+
+Nuestro contenedor esta disponible en Docker Hub mediante este enlace podemos acceder a este: https://hub.docker.com/r/ajpelaez/blablacar/
+Para descargarlo directamente desde consola podemos usar:
+~~~
+docker pull ajpelaez/blablacar
+~~~
