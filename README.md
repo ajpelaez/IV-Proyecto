@@ -97,3 +97,57 @@ Para descargarlo directamente desde consola podemos usar:
 ~~~
 docker pull ajpelaez/blablacar
 ~~~
+
+---
+
+## Desplegar en AWS
+Para desplegar nuestro servicio web en AWS haremos uso de Vagrant, Ansible y Fabric.
+![AWS](https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/112012/amazon.com_web_services.png?itok=58la_TK3)
+
+- Antes de nada tenemos que configurar nuestro ordenador local instalando ansible, vagrant y fabric. Además de el plugin de vagrant y la consola para AWS.
+~~~
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+sudo apt-get install vagrant
+pip3 install fabric
+vagrant plugin install vagrant-aws
+pip3 install awscli --upgrade --user
+~~~
+- El siguiente paso sería el registro en amazon web services con una cuenta de prueba o de estudiante.
+- Después debemos crear un grupo de seguridad con los puertos 22 y 80 abiertos.
+![grupo seguridad](https://i.imgur.com/PHbeDHf.png)
+
+- Después debemos crear un key keypair
+![keypair](https://i.imgur.com/uKVTFG8.png)
+Una vez creado, lo descargamos, le cambiamos los permisos a 600 y lo cargamos en nuestro agente ssh ejecutando:
+~~~
+ssh-add Key-IV.pem
+~~~
+
+- Debemos crear también un access key en security credentials, para obtener nuestro aws_secret_access_key y aws_access_key_id.
+
+- Ahora empezaremos a configurar Vagrant, en primer lugar tenermos que descargarnos una imagen vacía sobre la que trabajar y que nos ayudará a prevenir errores.
+~~~
+vagrant box add dummy vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
+~~~
+
+- Y iniciamos Vagrant ejecutando:
+~~~
+vagrant init
+~~~
+Esto nos creara un archivo Vagrantfile que es el que editaremos añadiendo la configuración que necesitamos para AWS.
+
+- Ahora ejecutamos
+~~~
+aws configure
+~~~
+Y introducimos los aws_secret_access_key y aws_access_key_id que creamos anteriormente, junto con la región que usarmos en AWS.
+
+- También debemos agregar algunos parámetros de configuración en nuestro Vagrantfile, estos se pueden ver simplemente abriendo el archivo en el repositorio.
+
+- Y ya tenemos listo Vagrant, ahora ejecutamos:
+~~~
+vagrant up --provider=aws
+~~~
+Y este comando empezará a crearnos nuestra máquina en AWS, que en unos minutos estará lista para usarse.
