@@ -101,8 +101,9 @@ docker pull ajpelaez/blablacar
 ---
 
 ## Desplegar en AWS
-Para desplegar nuestro servicio web en AWS haremos uso de Vagrant, Ansible y Fabric.
 ![AWS](https://botw-pd.s3.amazonaws.com/styles/logo-thumbnail/s3/112012/amazon.com_web_services.png?itok=58la_TK3)
+
+Para desplegar nuestro servicio web en AWS haremos uso de Vagrant, Ansible y Fabric.
 
 - Antes de nada tenemos que configurar nuestro ordenador local instalando ansible, vagrant y fabric. Además de el plugin de vagrant y la consola para AWS.
 ~~~
