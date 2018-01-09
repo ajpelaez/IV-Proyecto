@@ -1,0 +1,15 @@
+---
+- hosts: all
+  gather_facts: no
+
+  pre_tasks:
+  - name: Install Python2
+    become: yes
+    raw: apt-get update && apt-get -y install python-simplejson
+
+  tasks:
+    - import_tasks: tasks/python3.yml
+    - import_tasks: tasks/pip.yml
+    - import_tasks: tasks/python-requirements.yml
+    - import_tasks: tasks/iptables.yml
+    - import_tasks: tasks/start-service.yml

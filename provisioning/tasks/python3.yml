@@ -1,0 +1,4 @@
+---
+- name: install python3
+  become: yes
+  apt: name=python3 state=present

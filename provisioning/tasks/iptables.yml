@@ -1,0 +1,4 @@
+---
+- name: redirect port 80 to port 8000
+  become: yes
+  command: bash -lc "iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8000"
