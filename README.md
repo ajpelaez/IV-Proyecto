@@ -152,3 +152,15 @@ Y introducimos los aws_secret_access_key y aws_access_key_id que creamos anterio
 vagrant up --provider=aws
 ~~~
 Y este comando empezará a crearnos nuestra máquina en AWS, que en unos minutos estará lista para usarse.
+
+- Ahora pasaremos a la configuración de la máquina para lo que haremos uso de Ansible, para esto crearemos la carpeta provisioning, que contendrá las tasks que tiene que ejecutar Ansible, además de agregar algunas configuraciones en nuestro Vagrantfile para que ejecute el playbook de Ansible una vez creada la máquina.
+
+- Una vez tenemos la máquina configurada pasaremos a instalar nuestra app con Fabric, para lo cual crearemos un archivo fabfile que contendrá las ordenes de deploy y start para nuestra app.
+
+- Y para realizar el deploy de nuestra app con Fabric haremos uso de un pequeño script bash que ejecuta las ordenes para descargar e iniciar nuestra app en la máquina. Su uso es el siguiente:
+~~~
+cd despliegue
+./deploy_app.sh <IP>
+~~~
+
+Despliegue final: 52.56.76.184

@@ -14,6 +14,6 @@ Vagrant.configure("2") do |config|
     config.vm.provision :ansible do |ansible|
       ansible.force_remote_user= true
       ansible.host_key_checking=false
-      ansible.playbook = "provisioning/playbook.yml"
+      ansible.playbook = "provision/playbook.yml"
   end
 end

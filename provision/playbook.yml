@@ -10,6 +10,4 @@
   tasks:
     - import_tasks: tasks/python3.yml
     - import_tasks: tasks/pip.yml
-    - import_tasks: tasks/python-requirements.yml
-    - import_tasks: tasks/iptables.yml
-    - import_tasks: tasks/start-service.yml
+    - import_tasks: tasks/git.yml

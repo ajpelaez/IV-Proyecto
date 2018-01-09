@@ -1,3 +1,0 @@
----
-- name: start web service
-  command: bash -lc "cd /vagrant/FindBlaBlaCarBot && nohup hug -f api.py &"
